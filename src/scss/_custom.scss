@@ -1,1 +1,16 @@
 // Here you can add other styles
+$critical: #ff6565;
+$warning: #ffc563;
+$normal: #57ff57;
+
+.normal {
+  color: $normal;
+}
+
+.warning {
+  color: $warning;
+}
+
+.critical {
+  color: $critical;
+}
