@@ -6,11 +6,11 @@ const WidgetsDropdown = () => {
   // render
   return (
     <CRow>
-      <CCol sm="6" lg="4">
+      <CCol sm="6" lg="8">
         <CWidgetDropdown
-          color="gradient-info"
-          header="Engines Status"
-          text="Operational Usage of Engines"
+          color="gradient-primary"
+          header="Manpower Requirement"
+          text="Estimated manpower for next 5 days"
           footerSlot={
             <div
               style={{
@@ -19,16 +19,41 @@ const WidgetsDropdown = () => {
                 marginTop: 20,
               }}
             >
-              <CRow>
-                <CCol sm="6" lg="6">
-                  <b>353</b>
+              <CRow class="row justify-content-around">
+                <CCol sm="6" lg="2">
+                  <text className={"normal"}>
+                    <b>25</b>
+                  </text>
                   <br />
-                  <text class={"normal"}> Operating</text>
+                  <text> 11/3</text>
                 </CCol>
-                <CCol sm="6" lg="6">
-                  <b>23</b>
+                <CCol sm="6" lg="2">
+                  <text className={"warning"}>
+                    <b>44</b>
+                  </text>
                   <br />
-                  <text class={"danger"}> Off </text>
+                  <text> 12/3</text>
+                </CCol>
+                <CCol sm="6" lg="2">
+                  <text className={"critical"}>
+                    <b>88</b>
+                  </text>
+                  <br />
+                  <text> 13/3</text>
+                </CCol>
+                <CCol sm="6" lg="2">
+                  <text className={"critical"}>
+                    <b>123</b>
+                  </text>
+                  <br />
+                  <text> 14/3</text>
+                </CCol>
+                <CCol sm="6" lg="2">
+                  <text className={"normal"}>
+                    <b>23</b>
+                  </text>
+                  <br />
+                  <text> 15/3</text>
                 </CCol>
               </CRow>
             </div>
@@ -36,9 +61,9 @@ const WidgetsDropdown = () => {
         />
       </CCol>
 
-      <CCol sm="10" lg="6">
+      <CCol sm="6" lg="4">
         <CWidgetDropdown
-          color="gradient-primary"
+          color="gradient-info"
           header="Detailed Engine Health"
           text="Breakdown of Engine Health Status"
           footerSlot={
@@ -72,26 +97,6 @@ const WidgetsDropdown = () => {
                 </CCol>
               </CRow>
             </div>
-          }
-        />
-      </CCol>
-
-      <CCol sm="2" lg="2">
-        <CWidgetDropdown
-          color="gradient-warning"
-          header="Hello James"
-          text="How are you today?"
-          footerSlot={
-            <ChartLineSimple
-              className="mt-3"
-              style={{ height: "70px" }}
-              backgroundColor="rgba(255,255,255,.2)"
-              dataPoints={[78, 81, 80, 45, 34, 12, 40]}
-              options={{ elements: { line: { borderWidth: 2.5 } } }}
-              pointHoverBackgroundColor="warning"
-              label="Members"
-              labels="months"
-            />
           }
         />
       </CCol>

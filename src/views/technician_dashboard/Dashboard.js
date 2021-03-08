@@ -10,10 +10,10 @@ import {
 import { getBadge, jetData, jetFields, usersData } from "./constants";
 
 import MainChartExample from "./MainChartExample.js";
+import WidgetsDropdown from "./WidgetsDropdown";
 
 const Dashboard = () => {
   const [details, setDetails] = useState([]);
-
   const toggleDetails = (index) => {
     const position = details.indexOf(index);
     let newDetails = details.slice();
@@ -24,14 +24,10 @@ const Dashboard = () => {
     }
     setDetails(newDetails);
   };
-  const [startDate, setStartDate] = useState(1326240000000);
-  const [endDate, setEndDate] = useState(1330300800000);
-  const filteredDateItems = usersData.filter((item) => {
-    return item.registered >= startDate && item.registered <= endDate;
-  });
 
   return (
     <>
+      <WidgetsDropdown />
       <CCard style={{ padding: "10px 20px 10px 20px" }}>
         <h4 id="traffic" style={{ margin: "10px 0 0 0" }}>
           Aircraft Monitor
@@ -57,7 +53,7 @@ const Dashboard = () => {
               </td>
             ),
           }}
-        ></CDataTable>
+        />
       </CCard>
       <CCard>
         <CCardBody>
