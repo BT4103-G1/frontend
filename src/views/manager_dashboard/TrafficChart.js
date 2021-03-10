@@ -6,20 +6,33 @@ const brandSuccess = getStyle("success") || "#4dbd74";
 const brandInfo = getStyle("warning") || "#f3993b";
 const brandDanger = getStyle("danger") || "#f86c6b";
 
-const TrafficChart = (attributes) => {
+const TrafficChart = ({ mode }) => {
   const random = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
+
+  function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+  }
 
   const defaultDatasets = (() => {
     let elements = 27;
     const data1 = [];
     const data2 = [];
     const data3 = [];
+    const data4 = [];
+    const data5 = [];
+    const data6 = [];
     for (let i = 0; i <= elements; i++) {
       data1.push(random(50, 200));
       data2.push(random(80, 100));
       data3.push(random(80, 100));
+      let val1 = Math.random() * 100;
+      let val2 = getRandomArbitrary(0, 100 - val1);
+      let val3 = 100 - val1 - val2;
+      data4.push(val1);
+      data5.push(val2);
+      data6.push(val3);
     }
     return [
       {
@@ -28,7 +41,7 @@ const TrafficChart = (attributes) => {
         borderColor: brandInfo,
         pointHoverBackgroundColor: brandInfo,
         borderWidth: 2,
-        data: data1,
+        data: mode ? data4 : data1,
       },
       {
         label: "Success",
@@ -36,7 +49,7 @@ const TrafficChart = (attributes) => {
         borderColor: brandSuccess,
         pointHoverBackgroundColor: brandSuccess,
         borderWidth: 2,
-        data: data2,
+        data: mode ? data5 : data2,
       },
       {
         label: "Danger",
@@ -44,7 +57,7 @@ const TrafficChart = (attributes) => {
         borderColor: brandDanger,
         pointHoverBackgroundColor: brandDanger,
         borderWidth: 2,
-        data: data3,
+        data: mode ? data6 : data3,
       },
     ];
   })();
@@ -52,9 +65,9 @@ const TrafficChart = (attributes) => {
   const defaultOptions = (() => {
     return {
       maintainAspectRatio: false,
-      legend: {
-        display: false,
-      },
+      // legend: {
+      //   display: false,
+      // },
       scales: {
         xAxes: [
           {
@@ -68,8 +81,8 @@ const TrafficChart = (attributes) => {
             ticks: {
               beginAtZero: true,
               maxTicksLimit: 5,
-              stepSize: Math.ceil(250 / 5),
-              max: 250,
+              stepSize: mode ? 100 : Math.ceil(250 / 5),
+              max: mode ? 100 : 250,
             },
             gridLines: {
               display: true,
@@ -91,7 +104,7 @@ const TrafficChart = (attributes) => {
   // render
   return (
     <CChartLine
-      {...attributes}
+      style={{ height: "300px", marginTop: "40px" }}
       datasets={defaultDatasets}
       options={defaultOptions}
       labels={[

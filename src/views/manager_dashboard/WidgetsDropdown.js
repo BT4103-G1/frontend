@@ -1,6 +1,7 @@
 import React from "react";
-import { CCol, CRow, CWidgetDropdown } from "@coreui/react";
+import { CCard, CCardBody, CCol, CRow, CWidgetDropdown } from "@coreui/react";
 import ChartLineSimple from "./charts/ChartLineSimple";
+import PieChart from "./charts/TotalPieChart";
 
 const WidgetsDropdown = () => {
   // render
@@ -77,23 +78,17 @@ const WidgetsDropdown = () => {
       </CCol>
 
       <CCol sm="2" lg="2">
-        <CWidgetDropdown
-          color="gradient-warning"
-          header="Hello James"
-          text="How are you today?"
-          footerSlot={
-            <ChartLineSimple
-              className="mt-3"
-              style={{ height: "70px" }}
-              backgroundColor="rgba(255,255,255,.2)"
-              dataPoints={[78, 81, 80, 45, 34, 12, 40]}
-              options={{ elements: { line: { borderWidth: 2.5 } } }}
-              pointHoverBackgroundColor="warning"
-              label="Members"
-              labels="months"
-            />
-          }
-        />
+        <CCard>
+          <CCardBody>
+            <CCol>
+              <h5 id="traffic" className="card-title mb-0">
+                Overview
+              </h5>
+              <div className="small text-muted mb-3">Total Engine Status</div>
+            </CCol>
+            <PieChart />
+          </CCardBody>
+        </CCard>
       </CCol>
     </CRow>
   );
