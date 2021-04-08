@@ -22,7 +22,7 @@ const WidgetsDropdown = () => {
             >
               <CRow>
                 <CCol sm="6" lg="6">
-                  <b>353</b>
+                  <b>450</b>
                   <br />
                   <text class={"normal"}> Operating</text>
                 </CCol>
@@ -52,17 +52,17 @@ const WidgetsDropdown = () => {
             >
               <CRow>
                 <CCol sm="6" lg="3">
-                  <b>353</b>
+                  <b>300</b>
                   <br />
                   <text className={"normal"}> Normal</text>
                 </CCol>
                 <CCol sm="6" lg="3">
-                  <b>353</b>
+                  <b>100</b>
                   <br />
                   <text className={"warning"}> Warning</text>
                 </CCol>
                 <CCol sm="6" lg="3">
-                  <b>353</b>
+                  <b>50</b>
                   <br />
                   <text className={"critical"}> Critical</text>
                 </CCol>

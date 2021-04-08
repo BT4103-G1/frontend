@@ -5,9 +5,9 @@ const pie = {
   labels: ["Red", "Green", "Yellow"],
   datasets: [
     {
-      data: [300, 50, 100],
-      backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-      hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+      data: [50, 100, 300],
+      backgroundColor: ["#ff4e4e", "#ffc563", "#57ff57"],
+      hoverBackgroundColor: ["#ff4e4e", "#ffc563", "#57ff57"],
     },
   ],
 };

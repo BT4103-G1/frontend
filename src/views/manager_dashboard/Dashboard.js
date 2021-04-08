@@ -14,6 +14,8 @@ import TrafficChart from "./TrafficChart.js";
 import AircraftMonitor from "./AircraftMonitor";
 import LocationAndHealth from "./charts/LocationAndHealth";
 import LocationAndAircraft from "./charts/LocationAndAircraft";
+import GlobalView from "./charts/GlobalView";
+import LocalView from "./charts/LocalView";
 
 const Dashboard = () => {
   const [percentageMode, setPercentageMode] = useState(false);
@@ -29,6 +31,65 @@ const Dashboard = () => {
         </div>
         <AircraftMonitor />
       </CCard>
+      <CRow>
+        <CCol>
+          <CCard>
+            <CCardBody>
+              <CRow>
+                <CCol>
+                  <h4 id="traffic" className="card-title mb-0">
+                    Feature Analysis
+                  </h4>
+                  <div className="small text-muted">Global Interpretation</div>
+                </CCol>
+              </CRow>
+              <GlobalView />
+            </CCardBody>
+          </CCard>
+        </CCol>
+        <CCol>
+          <CCard>
+            <CCardBody>
+              <CRow>
+                <CCol>
+                  <h4 id="traffic" className="card-title mb-0">
+                    Feature Analysis
+                  </h4>
+                  <div className="small text-muted">Local Interpretation</div>
+                </CCol>
+                <CCol>
+                  <div style={{ marginLeft: 100 }} className="dropdown">
+                    <button
+                      className="btn btn-secondary dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Aircraft 334637
+                    </button>
+                    <div
+                      className="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <a className="dropdown-item" href="#">
+                        Item
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        Another Item
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        One more item
+                      </a>
+                    </div>
+                  </div>
+                </CCol>
+              </CRow>
+              <LocalView />
+            </CCardBody>
+          </CCard>
+        </CCol>
+      </CRow>
       <CCard>
         <CCardBody>
           <CRow class="row justify-content-between">
