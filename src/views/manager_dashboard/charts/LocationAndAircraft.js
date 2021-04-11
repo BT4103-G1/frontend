@@ -11,7 +11,7 @@ const LocationAndAircraft = () => {
           type: "column",
           height: "340",
         },
-        colors: ["#bb47ff", "#03ffaf", "#ff4e4e", "rgb(61,90,187)"],
+        colors: ["#111b45", "#243684", "#425ab4", "#6e89ff"],
         credits: {
           enabled: false,
         },
