@@ -7,7 +7,7 @@ const pie = {
     {
       data: [50, 100, 300],
       backgroundColor: ["#ff4e4e", "#ffc563", "#2c9250"],
-      hoverBackgrou ndColor: ["#ff4e4e", "#ffc563", "#2c9250"],
+      hoverBackgroundColor: ["#ff4e4e", "#ffc563", "#2c9250"],
     },
   ],
 };
@@ -23,6 +23,7 @@ const options = {
   title: {
     display: false,
   },
+  maintainAspectRatio: false,
 };
 
 const PieChart = () => {

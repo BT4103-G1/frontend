@@ -1,7 +1,19 @@
 // Here you can add other styles
 $critical: #ff4e4e;
 $warning: #ffc563;
-$normal: #2c9250;
+$normal: #00fd36;
+
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
 
 .normal {
   color: $normal;

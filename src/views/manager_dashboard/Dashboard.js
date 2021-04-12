@@ -22,15 +22,17 @@ const Dashboard = () => {
   return (
     <>
       <WidgetsDropdown />
-      <CCard style={{ padding: "10px 20px 10px 20px" }}>
-        <h4 id="traffic" style={{ margin: "10px 0 0 0" }}>
-          Aircraft Monitor
-        </h4>
-        <div className="small text-muted"  style={{ margin: "0 0 15px 0" }}>
-          Detailed Overview of Aircraft Turbo Engine Health
-        </div>
-        <AircraftMonitor />
-      </CCard>
+      <div style={{ marginTop: -12 }}>
+        <CCard style={{ padding: "10px 20px 10px 20px" }}>
+          <h4 id="traffic" style={{ margin: "10px 0 0 0" }}>
+            Aircraft Monitor
+          </h4>
+          <div className="small text-muted" style={{ margin: "0 0 15px 0" }}>
+            Detailed Overview of Aircraft Turbo Engine Health
+          </div>
+          <AircraftMonitor />
+        </CCard>
+      </div>
       <CRow>
         <CCol>
           <CCard>
