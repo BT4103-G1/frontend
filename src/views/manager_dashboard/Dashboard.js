@@ -26,7 +26,7 @@ const Dashboard = () => {
         <h4 id="traffic" style={{ margin: "10px 0 0 0" }}>
           Aircraft Monitor
         </h4>
-        <div className="small text-muted">
+        <div className="small text-muted"  style={{ margin: "0 0 15px 0" }}>
           Detailed Overview of Aircraft Turbo Engine Health
         </div>
         <AircraftMonitor />

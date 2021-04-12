@@ -27,8 +27,6 @@ const AircraftMonitor = () => {
       items={jetData}
       fields={jetFields}
       columnFilter={"RUL"}
-      itemsPerPageSelect
-      itemsPerPage={10}
       hover
       sorter
       pagination

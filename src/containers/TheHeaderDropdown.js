@@ -8,6 +8,8 @@ import {
   CImg
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
+import ProfilePic from 'src/assets/weisheng_dp.PNG'
+
 
 const TheHeaderDropdown = () => {
   return (
@@ -19,7 +21,7 @@ const TheHeaderDropdown = () => {
       <CDropdownToggle className="c-header-nav-link" caret={false}>
         <div className="c-avatar">
           <CImg
-            src={'avatars/6.jpg'}
+            src={ProfilePic}
             className="c-avatar-img"
             alt="admin@bootstrapmaster.com"
           />

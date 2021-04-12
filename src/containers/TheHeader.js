@@ -1,6 +1,6 @@
 import React from 'react'
 import {CHeader, CHeaderNav, CHeaderNavItem, CHeaderNavLink, CNavbarBrand} from '@coreui/react'
-import {TheHeaderDropdown} from './index'
+import {TheHeaderDropdown, Notifications} from './index'
 import DstaLogo from 'src/assets/DSTA.gif'
 
 // routes config
@@ -25,9 +25,11 @@ const TheHeader = () => {
         {/*</CHeaderNavItem>*/}
       </CHeaderNav>
 
-      {/*<CHeaderNav className="px-3">*/}
-      {/*  <TheHeaderDropdown/>*/}
-      {/*</CHeaderNav>*/}
+      <CHeaderNav className="px-3">
+        <div className="small text-muted text-truncate">Welcome, Wei Sheng</div>
+        <TheHeaderDropdown/>
+        <Notifications/>
+      </CHeaderNav>
 
 
     </CHeader>

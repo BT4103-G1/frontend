@@ -11,7 +11,7 @@ const LocationAndHealth = () => {
           type: "column",
           height: "340",
         },
-        colors: ["#d94343", "#dea754", "#95e563"],
+        colors: ["#d94343", "#dea754", "#2c9250"],
         credits: {
           enabled: false,
         },
@@ -24,7 +24,7 @@ const LocationAndHealth = () => {
         yAxis: {
           min: 0,
           title: {
-            text: "Plane count",
+            text: "Aircraft count",
           },
           stackLabels: {
             enabled: true,
@@ -59,6 +59,9 @@ const LocationAndHealth = () => {
             stacking: "normal",
             dataLabels: {
               enabled: true,
+              style: {
+                textOutline: false
+              }
             },
           },
         },

@@ -2,7 +2,7 @@ import React from "react";
 import { CChartLine } from "@coreui/react-chartjs";
 import { getStyle, hexToRgba } from "@coreui/utils";
 
-const brandSuccess = getStyle("success") || "#4dbd74";
+const brandSuccess = getStyle("success") || "#2c9250";
 const brandInfo = getStyle("warning") || "#f3993b";
 const brandDanger = getStyle("danger") || "#f86c6b";
 
@@ -108,34 +108,34 @@ const TrafficChart = ({ mode }) => {
       datasets={defaultDatasets}
       options={defaultOptions}
       labels={[
-        "Mo",
-        "Tu",
-        "We",
-        "Th",
-        "Fr",
-        "Sa",
-        "Su",
-        "Mo",
-        "Tu",
-        "We",
-        "Th",
-        "Fr",
-        "Sa",
-        "Su",
-        "Mo",
-        "Tu",
-        "We",
-        "Th",
-        "Fr",
-        "Sa",
-        "Su",
-        "Mo",
-        "Tu",
-        "We",
-        "Th",
-        "Fr",
-        "Sa",
-        "Su",
+        "17/3",
+        "18/3",
+        "19/3",
+        "20/3",
+        "21/3",
+        "22/3",
+        "23/3",
+        "24/3",
+        "25/3",
+        "26/3",
+        "27/3",
+        "28/3",
+        "29/3",
+        "30/3",
+        "31/3",
+        "1/4",
+        "2/4",
+        "3/4",
+        "4/4",
+        "5/4",
+        "6/4",
+        "7/4",
+        "8/4",
+        "9/4",
+        "10/4",
+        "11/4",
+        "12/4",
+        "13/4",
       ]}
     />
   );

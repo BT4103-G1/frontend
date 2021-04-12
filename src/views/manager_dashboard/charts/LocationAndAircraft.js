@@ -11,7 +11,7 @@ const LocationAndAircraft = () => {
           type: "column",
           height: "340",
         },
-        colors: ["#111b45", "#243684", "#425ab4", "#6e89ff"],
+        colors: ["#050e26", "#25377e", "#536dcf", "#b9c4ff"],
         credits: {
           enabled: false,
         },
@@ -24,7 +24,7 @@ const LocationAndAircraft = () => {
         yAxis: {
           min: 0,
           title: {
-            text: "Plane count",
+            text: "Aircraft count",
           },
           stackLabels: {
             enabled: true,
@@ -59,7 +59,10 @@ const LocationAndAircraft = () => {
             stacking: "normal",
             dataLabels: {
               enabled: true,
-            },
+              style: {
+                textOutline: false
+              }
+            }
           },
         },
         series: [

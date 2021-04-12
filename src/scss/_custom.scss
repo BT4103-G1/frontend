@@ -1,10 +1,14 @@
 // Here you can add other styles
 $critical: #ff4e4e;
 $warning: #ffc563;
-$normal: #57ff57;
+$normal: #2c9250;
 
 .normal {
   color: $normal;
+}
+
+.big {
+  font-size: 28px;
 }
 
 .warning {

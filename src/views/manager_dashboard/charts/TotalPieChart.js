@@ -6,8 +6,8 @@ const pie = {
   datasets: [
     {
       data: [50, 100, 300],
-      backgroundColor: ["#ff4e4e", "#ffc563", "#57ff57"],
-      hoverBackgroundColor: ["#ff4e4e", "#ffc563", "#57ff57"],
+      backgroundColor: ["#ff4e4e", "#ffc563", "#2c9250"],
+      hoverBackgrou ndColor: ["#ff4e4e", "#ffc563", "#2c9250"],
     },
   ],
 };

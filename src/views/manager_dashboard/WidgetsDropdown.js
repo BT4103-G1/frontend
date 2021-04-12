@@ -3,13 +3,17 @@ import { CCard, CCardBody, CCol, CRow, CWidgetDropdown } from "@coreui/react";
 import ChartLineSimple from "./charts/ChartLineSimple";
 import PieChart from "./charts/TotalPieChart";
 
+
+
+
 const WidgetsDropdown = () => {
   // render
+
   return (
     <CRow>
       <CCol sm="6" lg="4">
         <CWidgetDropdown
-          color="gradient-info"
+          style={{height: 180, backgroundImage: "linear-gradient(to bottom right, #4b348f , #2a608a)"}}
           header="Engines Status"
           text="Operational Usage of Engines"
           footerSlot={
@@ -17,19 +21,21 @@ const WidgetsDropdown = () => {
               style={{
                 height: 70,
                 textAlign: "center",
-                marginTop: 20,
+                marginBottom: 15,
               }}
             >
               <CRow>
                 <CCol sm="6" lg="6">
-                  <b>450</b>
+                  <b><text class={"big"}>450</text> </b>
                   <br />
-                  <text class={"normal"}> Operating</text>
+                  <text class={"normal"}>Operating</text>
                 </CCol>
                 <CCol sm="6" lg="6">
-                  <b>23</b>
+                  <b>
+                    <text className={"big"}>23</text>
+                  </b>
                   <br />
-                  <text class={"danger"}> Off </text>
+                  <text class={"danger"}>Off</text>
                 </CCol>
               </CRow>
             </div>
@@ -39,7 +45,7 @@ const WidgetsDropdown = () => {
 
       <CCol sm="10" lg="6">
         <CWidgetDropdown
-          color="gradient-primary"
+          style={{height: 180, backgroundImage: "linear-gradient(to bottom right, #4b348f , #2a608a  )"}}
           header="Detailed Engine Health"
           text="Breakdown of Engine Health Status"
           footerSlot={
@@ -47,27 +53,27 @@ const WidgetsDropdown = () => {
               style={{
                 height: 70,
                 textAlign: "center",
-                marginTop: 20,
+                marginBottom: 15,
               }}
             >
               <CRow>
                 <CCol sm="6" lg="3">
-                  <b>300</b>
+                  <b><text className={"big"}>300</text></b>
                   <br />
                   <text className={"normal"}> Normal</text>
                 </CCol>
                 <CCol sm="6" lg="3">
-                  <b>100</b>
+                  <b><text className={"big"}>100</text></b>
                   <br />
                   <text className={"warning"}> Warning</text>
                 </CCol>
                 <CCol sm="6" lg="3">
-                  <b>50</b>
+                  <b><text className={"big"}>50</text></b>
                   <br />
                   <text className={"critical"}> Critical</text>
                 </CCol>
                 <CCol sm="6" lg="3">
-                  <b>23</b>
+                  <b><text className={"big"}>23</text></b>
                   <br />
                   <text> Repair</text>
                 </CCol>
@@ -78,17 +84,14 @@ const WidgetsDropdown = () => {
       </CCol>
 
       <CCol sm="2" lg="2">
-        <CCard>
-          <CCardBody>
-            <CCol>
-              <h5 id="traffic" className="card-title mb-0">
-                Overview
-              </h5>
-              <div className="small text-muted mb-3">Total Engine Status</div>
-            </CCol>
-            <PieChart />
-          </CCardBody>
-        </CCard>
+        <CWidgetDropdown
+          style={{height: 180, backgroundImage: "linear-gradient(to bottom right, #4b348f , #2a608a  )"}}
+          header="Overview"
+          text="Total Engine Status"
+          footerSlot={
+            <div style={{marginBottom: 10}}> <PieChart/> </div>
+          }
+         />
       </CCol>
     </CRow>
   );
