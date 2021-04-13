@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import {
-  CSwitch,
+  CDropdownToggle,
   CCard,
   CCardBody,
   CCol,
-  CContainer,
+  CDropdownItem,
+  CDropdown,
+  CDropdownMenu,
   CRow,
 } from "@coreui/react";
 import { ButtonGroup, Button } from "react-bootstrap";
@@ -42,7 +44,9 @@ const Dashboard = () => {
                   <h4 id="traffic" className="card-title mb-0">
                     Feature Analysis
                   </h4>
-                  <div className="small text-muted">Global Interpretation</div>
+                  <div className="small text-muted">
+                    Overall Engine Feature Explanation
+                  </div>
                 </CCol>
               </CRow>
               <GlobalView />
@@ -57,34 +61,23 @@ const Dashboard = () => {
                   <h4 id="traffic" className="card-title mb-0">
                     Feature Analysis
                   </h4>
-                  <div className="small text-muted">Local Interpretation</div>
+                  <div className="small text-muted">
+                    Individual Engine Feature Explanation
+                  </div>
                 </CCol>
                 <CCol>
-                  <div style={{ marginLeft: 100 }} className="dropdown">
-                    <button
-                      className="btn btn-secondary dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Aircraft 334637
-                    </button>
-                    <div
-                      className="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <a className="dropdown-item" href="#">
-                        Item
-                      </a>
-                      <a className="dropdown-item" href="#">
-                        Another Item
-                      </a>
-                      <a className="dropdown-item" href="#">
-                        One more item
-                      </a>
-                    </div>
-                  </div>
+                  <CDropdown style={{ marginLeft: 140 }}>
+                    <CDropdownToggle caret color="normal">
+                      Aircraft 583958
+                    </CDropdownToggle>
+                    <CDropdownMenu>
+                      <CDropdownItem header>Select an aircraft</CDropdownItem>
+                      <CDropdownItem>Aircraft 234512</CDropdownItem>
+                      <CDropdownItem>Aircraft 124562</CDropdownItem>
+                      <CDropdownItem>Aircraft 234451</CDropdownItem>
+                      <CDropdownItem>View More</CDropdownItem>
+                    </CDropdownMenu>
+                  </CDropdown>
                 </CCol>
               </CRow>
               <LocalView />
@@ -102,12 +95,30 @@ const Dashboard = () => {
               <div className="small text-muted ">Aircraft Status Over Time</div>
             </CCol>
             <CCol lg="2">
-              <div className="small text-muted mb-1 row">Percentage Mode</div>
-              <div class={"row"}>
-                <ButtonGroup size="sm">
-                  <Button onClick={() => setPercentageMode(false)}>Off</Button>
-                  <Button onClick={() => setPercentageMode(true)}>On</Button>
-                </ButtonGroup>
+              <div style={{ marginLeft: 100 }}>
+                <div className="small text-muted mb-1 row">Percentage Mode</div>
+                <div className="ml-1" class={"row"}>
+                  <div
+                    className="btn-group"
+                    role="group"
+                    aria-label="Basic outlined example"
+                  >
+                    <button
+                      type="button"
+                      className="btn btn-outline-primary"
+                      onClick={() => setPercentageMode(false)}
+                    >
+                      Off
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary"
+                      onClick={() => setPercentageMode(true)}
+                    >
+                      On
+                    </button>
+                  </div>
+                </div>
               </div>
             </CCol>
           </CRow>

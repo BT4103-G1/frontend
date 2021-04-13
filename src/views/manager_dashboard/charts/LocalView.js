@@ -10,6 +10,7 @@ const LocationAndAircraft = () => {
         chart: {
           type: "bar",
         },
+        colors: ["#bf2121"],
         title: {
           text: "",
         },
@@ -35,7 +36,7 @@ const LocationAndAircraft = () => {
         },
         series: [
           {
-            name: "Local Interpretation",
+            name: "Individual Aircraft Interpretation",
             data: [20, 18, 14, 12, 11],
           },
         ],
