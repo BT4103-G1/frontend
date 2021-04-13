@@ -44,7 +44,7 @@ const TrafficChart = ({ mode }) => {
         data: mode ? data4 : data1,
       },
       {
-        label: "Success",
+        label: "Normal",
         backgroundColor: "transparent",
         borderColor: brandSuccess,
         pointHoverBackgroundColor: brandSuccess,
@@ -52,7 +52,7 @@ const TrafficChart = ({ mode }) => {
         data: mode ? data5 : data2,
       },
       {
-        label: "Danger",
+        label: "Critical",
         backgroundColor: "transparent",
         borderColor: brandDanger,
         pointHoverBackgroundColor: brandDanger,
