@@ -12,7 +12,7 @@ const WidgetsDropdown = () => {
 
   return (
     <div className="row no-gutters">
-      <div className="col-5">
+      <div className="col-3">
         <CWidgetDropdown
           style={{
             padding: 0,
@@ -50,7 +50,7 @@ const WidgetsDropdown = () => {
           }
         />
       </div>
-      <div className="col-5">
+      <div className="col-6">
         <CWidgetDropdown
           style={{
             height: 180,
@@ -101,7 +101,7 @@ const WidgetsDropdown = () => {
           }
         />
       </div>
-      <div className="col-2">
+      <div className="col-3">
         <CWidgetDropdown
           style={{
             height: 180,
